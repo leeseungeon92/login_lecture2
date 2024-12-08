@@ -1,5 +1,6 @@
 "use strict";
 
+const User = require("../model/User");
 const UserStorage = require("../model/UserStorage");
 
 const output = {
@@ -18,6 +19,13 @@ const output = {
 
 const process = {
     login : (req, res)=> {
+        const user = new User(req.body);
+        const response = user.login();
+        console.log(response);
+        return res.json(response);
+    },
+
+    register : (req, res)=>{
         const id = req.body.id,
         password = req.body.password;
 
@@ -34,7 +42,7 @@ const process = {
         response.success = false;
         response.msg = "로그인 실패";
         return res.json(response);
-    },
+    }
 }
 
 module.exports = {
