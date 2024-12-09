@@ -1,5 +1,17 @@
 {
-    "id" : ["oksktmddjs"],
-    "password" : ["1234"],
-    "name" : ["이승언"]
+	"id": [
+		"oksktmddjs",
+		"test",
+		"test2"
+	],
+	"password": [
+		"1234",
+		"1234",
+		"1234"
+	],
+	"name": [
+		"이승언",
+		"armpit",
+		"asdf"
+	]
 }
